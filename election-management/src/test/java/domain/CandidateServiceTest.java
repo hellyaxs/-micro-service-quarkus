@@ -4,6 +4,7 @@ package domain;
 import io.quarkus.test.InjectMock;
 import io.quarkus.test.junit.QuarkusTest;
 import jakarta.inject.Inject;
+import jakarta.transaction.Transactional;
 import org.instancio.Instancio;
 import org.junit.jupiter.api.Test;
 
@@ -19,13 +20,14 @@ import static org.mockito.Mockito.*;
 class CandidateServiceTest {
 
 
-    @Inject
+    @jakarta.inject.Inject
     CandidateService candidateService;
 
     @InjectMock
     CandidateRepository candidateRepository;
 
     @Test
+    @Transactional
     void save() {
         Candidate candidate = Instancio.create(Candidate.class);
 

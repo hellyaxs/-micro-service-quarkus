@@ -7,6 +7,6 @@ public record Candidate(String id,
                         String givenName, String familyName,
                         Optional<String> jobTitle,
                         String email,
-                        Optional<String> phoneNumber,
-                        String birthDate) {
+                        Optional<String> phoneNumber) {
+
 }
