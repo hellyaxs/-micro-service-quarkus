@@ -9,6 +9,22 @@ import java.util.Optional;
 @Entity(name = "candidates")
 public class CandidateEntity {
 
+    @Id
+    @Column(name = "id")
+    private String id;
+
+    private String photo;
+    @Column(name = "given_name")
+    private String givenName;
+    @Column(name = "family_name")
+    private String familyName;
+    @Column(name = "job_title")
+    private String jobTitle;
+
+    private String email;
+    @Column(name = "phone")
+    private String phoneNumber;
+
 
     public String getId() {
         return id;
@@ -65,24 +81,6 @@ public class CandidateEntity {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
-
-
-
-    @Id
-    @Column(name = "id")
-    private String id;
-
-    private String photo;
-    @Column(name = "given_name")
-    private String givenName;
-    @Column(name = "family_name")
-    private String familyName;
-    @Column(name = "job_title")
-    private String jobTitle;
-
-    private String email;
-    @Column(name = "phone")
-    private String phoneNumber;
 
 
 
