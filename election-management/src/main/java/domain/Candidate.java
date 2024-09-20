@@ -1,6 +1,7 @@
 package domain;
 
 import api.dto.in.CreateCandidate;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.Optional;
 import java.util.UUID;

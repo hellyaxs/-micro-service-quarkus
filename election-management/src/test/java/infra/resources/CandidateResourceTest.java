@@ -44,13 +44,13 @@ class CandidateResourceTest {
 
     @Test
     void list(){
-        var out = Instancio.stream(Candidate.class).limit(4).toList();
+        var out = Instancio.stream(CandidateDTOout.class).limit(4).toList();
 
-        when(candidateApi.list()).thenReturn(out.stream().map(CandidateDTOout::fromDomain).toList());
+        when(candidateApi.list()).thenReturn(out);
 
         var response = given()
                 .when().get()
-                .then().statusCode(RestResponse.StatusCode.OK).extract().as(Candidate[].class);
+                .then().statusCode(RestResponse.StatusCode.OK).extract().as(CandidateDTOout[].class);
 
         verify(candidateApi).list();
         verifyNoMoreInteractions(candidateApi);
