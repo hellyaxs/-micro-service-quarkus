@@ -46,7 +46,7 @@ public class CandidateResourceIT {
                 .set(field("givenName"), "Thiago")
                 .set(field("familyName"), "Poiani")
                 .set(field("email"), in.email())
-                .set(field("phone"), in.phoneNumber())
+                .set(field("phoneNumber"), in.phoneNumber())
                 .set(field("jobTitle"), in.jobTitle())
                 .create();
 
