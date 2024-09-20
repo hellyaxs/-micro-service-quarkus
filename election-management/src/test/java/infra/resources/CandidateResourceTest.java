@@ -8,7 +8,6 @@ import domain.Candidate;
 import io.quarkus.test.InjectMock;
 import io.quarkus.test.common.http.TestHTTPEndpoint;
 import io.quarkus.test.junit.QuarkusTest;
-import io.restassured.internal.RestAssuredResponseOptionsImpl;
 import jakarta.ws.rs.core.MediaType;
 import org.instancio.Instancio;
 import org.jboss.resteasy.reactive.RestResponse;
