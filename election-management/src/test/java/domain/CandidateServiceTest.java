@@ -20,7 +20,7 @@ import static org.mockito.Mockito.*;
 class CandidateServiceTest {
 
 
-    @jakarta.inject.Inject
+    @Inject
     CandidateService candidateService;
 
     @InjectMock
