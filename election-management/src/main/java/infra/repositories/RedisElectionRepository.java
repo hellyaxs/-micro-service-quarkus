@@ -9,6 +9,7 @@ import io.quarkus.redis.datasource.sortedset.ScoreRange;
 import io.quarkus.redis.datasource.sortedset.SortedSetCommands;
 import jakarta.enterprise.context.ApplicationScoped;
 
+import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -31,6 +32,11 @@ public class RedisElectionRepository implements ElectionRepository {
 
         comands.zadd("elections" +election.id(),rank);
         pubsubComands.publish("elections",election.id());
+    }
+
+    @Override
+    public List<Election> findAll() {
+       throw  new UnsupportedOperationException();
     }
 
     public Election sync(Election election) {
