@@ -1,5 +1,5 @@
 ####
-# This Dockerfile is used in order to build a container that runs the Quarkus application in JVM mode
+# This Dockerfile is used in order to build a container that runs the Quarkus domain in JVM mode
 #
 # Before building the container image run:
 #
@@ -22,8 +22,8 @@
 #
 # docker run -i --rm -p 8080:8080 quarkus/result-app-legacy-jar
 #
-# This image uses the `run-java.sh` script to run the application.
-# This scripts computes the command line to execute your Java application, and
+# This image uses the `run-java.sh` script to run the domain.
+# This scripts computes the command line to execute your Java domain, and
 # includes memory/GC tuning.
 # You can configure the behavior using the following environment properties:
 # - JAVA_OPTS: JVM options passed to the `java` command (example: "-verbose:class")
